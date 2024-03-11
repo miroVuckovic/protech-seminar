@@ -1,0 +1,53 @@
+Upute za izradu projektnog zadatka
+
+
+
+Obavezni elementi:
+
+Potrebno je napraviti minimalno 4 međusobno povezane stranice.
+
+Stranice trebaju predstavljati neki OPG, frizerski, putničku agenciju, startup .... 
+
+(Može biti izmišljen, bolje nego stvarne informacije koristiti)
+
+Primjer: https://ladutti.com/
+
+Stranice moraju koristiti semantičke HTML5 elemente (https://www.w3schools.com/html/html5_semantic_elements.asp)
+
+Potrebno je napraviti vlastiti CSS, ne koristiti gotove predloške, iako oni mogu biti inspiracija.
+
+Stranice trebaju dizajnerski biti povezane, ali sadržajno drugačije. Npr. naslovna stranica, stranica o proizvodu, o nama, kontakt,....
+
+Stranica mora imate izbornik preko kojega se može navigirati između stranica.
+
+Minimalno jedna stranica mora imati sliku.
+
+U cijelom projektu mora biti minimalno jedan element sidra (hiperveza na dio stranice), element liste, element tablice.
+
+Dodati formu na stranicu i uz pomoć JS je validirati i recimo spremiti u lokalnu memoriju.
+
+Organizirati projekt po mapama (mapa za css, druga za js, treća za slike).
+
+
+
+
+
+Dodatni bodovi:
+
+Povezivanje sa društvenim mrežama.
+
+Umetanje interaktivnih sadržaja.
+
+Responzivnost (https://www.w3schools.com/css/css_rwd_grid.asp, w3.css, bootstrap ili slično)
+
+Dodatni sadržaji
+
+Napredni dizajn (float, position, animation, svg,...)
+
+Korištenje gotovih biblioteka za neki element na stranici. Uz poznavanje biblioteke i način kako izmijeniti određene stavke.
+
+Može se dodati još jedan dokument s nepovezanim sadržajem, ali s nekim vlastitim kodom ili rješenjem (kalkulator, gumb koji pokreće neke funkcije, obavijest pri zatvaranju dokumenta,...).
+
+Prebaciti stranicu na https://www.000webhost.com/ ili neki drugi (besplatni) hosting.
+
+Povezati se s nekim API-jem (HNB ili slično) i napraviti nešto osim pokazati podateke (recimo cjenik usluga u dvije valute )
