@@ -13,14 +13,19 @@
 
 <body class="body">
     <header class="header">
-        <a href="index.html"><img src="slike/protech-logo.png" alt="ProTech logo" class="responsive"></a>
+
+        <div class="logo_image">
+            <a href="index.html"><img src="slike/protech_transparent.png" alt="ProTech logo"></a>
+        </div>
+
         <h3>Rješavanje softverskih i hardverskih problema extraordinaire.</h3>
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="usluge.html">Usluge</a> |
-            <a href="primjeri.html">Svjedočanstva</a> |
-            <a href="about.html">O nama</a> |
-            <a href="kontakt.html">Kontakt</a>
+            <ul id="main_nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="usluge.html">Usluge</a></li>
+                <li><a href="primjeri.html" class="active">Portfolio</a></li>
+                <li><a href="about.html">O nama</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -28,54 +33,79 @@
 
         <!-- 1. red grida -->
         <figure class="grid-item">
-            <img src="slike/24_7-2048x2048.jpg" alt="Apstraktna slika raznoraznih informatičkih alata"
-                style="width:100%;">
+            <summary>Klijent: Banka FinTech<br>Digitalna transformacija bankovnih usluga</summary>
         </figure>
 
-        <p class="grid-item">Naš tim iskusnih tehničara dostupan je non-stop kako bi vam pomogao s bilo kakvim tehničkim problemima s
-            kojima se možete susresti.
-            Bilo da je riječ o rješavanju problema sa ​​softverom, popravku hardverskih problema ili postavljanju novih
-            uređaja, samo smo jedan telefonski poziv daleko.</p>
+        <p class="grid-item">
+        <details>Implementirali smo sveobuhvatnu platformu za online bankarstvo koja omogućuje klijentima pristup svim
+            bankovnim uslugama putem weba i mobilnih aplikacija. Platforma uključuje funkcionalnosti kao što su provjera
+            stanja računa, prijenos sredstava, upravljanje investicijama i sigurnosne postavke.
+            Tehnologije: Java, Spring Boot, Angular, MySQL, Docker, Kubernetes
+            Rezultati: Povećanje korisničke baze za 30%, smanjenje operativnih troškova za 20%, i poboljšana korisnička
+            iskustva s ocjenom 4.8/5.</details><br>
+        </p>
 
         <!-- 2. red grida -->
         <figure class="grid-item">
-            <img src="slike/software-update.png" alt="Apstraktna slika raznoraznih informatičkih alata"
-                style="width:100%;">
+            <summary>Klijent: E-ShopPro<br>e-commerce platforme za globalno tržište</summary>
         </figure>
 
-        <p class="grid-item">Ostanite ažurirani s najnovijim ažuriranjima i
-            instalacijama softvera.
-            Naši tehničari mogu vam pomoći instalirati, ažurirati i konfigurirati softverske
-            aplikacije kako biste osigurali optimalne performanse i sigurnost.</p>
+        <p class="grid-item">
+
+        <details>Kreirali smo prilagodljivu e-commerce platformu koja podržava više jezika i valuta, omogućava
+            personalizirane preporuke proizvoda, te uključuje napredne analitičke alate za praćenje prodaje i
+            korisničkih ponašanja.
+            Tehnologije: Python, Django, React, PostgreSQL, Elasticsearch
+            Rezultati: Povećanje prodaje za 40% u prvih šest mjeseci, visoka ocjena korisničkog iskustva (4.7/5), i
+            smanjenje stope napuštanja košarice za 25%.</details><br>
+        </p>
 
         <!-- 3. red grida -->
         <figure class="grid-item">
-            <img src="slike/remote_support.jpg" alt="Apstraktna slika raznoraznih informatičkih alata za update"
-                style="width:100%;">
+            <summary>Klijent: Zdravlje+<br>Razvoj aplikacije za upravljanje zdravljem pacijenata</summary>
         </figure>
 
-        <p class="grid-item">Ne dopustite da udaljenost bude prepreka u dobivanju potrebne pomoći.
-            Našom uslugom udaljene pomoći možemo sigurno povezati se s vašim računalom
-            ili uređajem i riješiti probleme u stvarnom vremenu, štedeći vam vrijeme i trud.</p>
+        <p class="grid-item">
+        <details>Opis: Razvili smo mobilnu aplikaciju koja omogućuje pacijentima praćenje svojih zdravstvenih podataka,
+            zakazivanje pregleda, komunikaciju s liječnicima putem chata, te integraciju s pametnim uređajima za
+            praćenje zdravlja.
+            Tehnologije: Kotlin, Swift, Firebase, MongoDB
+            Rezultati: Poboljšanje pacijentovog praćenja zdravstvenog stanja, smanjenje broja propuštenih pregleda za
+            50%, i visoka ocjena zadovoljstva korisnika (4.9/5).</details><br>
+        </p>
 
         <!-- 4. red grida -->
         <figure class="grid-item">
-            <img src="slike/backup.png" alt="Apstraktna slika raznoraznih informatičkih alata za backup" style="width:100%;">
+            <summary>Klijent: RetailConnect<br>Projekt: Izgradnja CRM sustava za optimizaciju prodajnih procesa
+            </summary>
         </figure>
 
-        <p class="grid-item">Gubitak važnih podataka može biti noćna mora.
-            S našim uslugama sigurnosnog kopiranja i obnove podataka,
-            možete mirno spavati znajući da su vaši datoteke sigurno kopirane i lako obnovljive u slučaju gubitka
-            podataka.</p>
+        <p class="grid-item">
+
+
+        <details> Implementirali smo prilagodljivi CRM sistem koji omogućuje praćenje interakcija s kupcima,
+            automatizaciju marketinških kampanja, te analizu prodajnih podataka za poboljšanje strategija prodaje.
+            Tehnologije: Salesforce, Node.js, Vue.js, Oracle Database
+            Rezultati: Poboljšanje zadovoljstva kupaca za 35%, povećanje prodajnih konverzija za 20%, i optimizacija
+            marketinških kampanja s ROI od 150%.</details><br>
+        </p>
 
         <!-- 5. red grida -->
         <figure class="grid-item">
-            <img src="slike/malware.jpg" alt="Apstraktna slika hakiranog računala" style="width:100%;">
+            <summary>Klijent: SmartCity Solutions<br>Projekt: Razvoj IoT platforme za upravljanje pametnim gradom
+            </summary>
         </figure>
 
-        <p class="grid-item">Zaštita vaših digitalnih resursa ključna je u današnjem povezanom svijetu.
-            Naši stručnjaci mogu vam pomoći identificirati i ukloniti viruse, malware i druge sigurnosne prijetnje,
-            osiguravajući da vaši uređaji i podaci ostanu sigurni i zaštićeni.</p>
+        <p class="grid-item">
+
+        <details> Opis: Kreirali smo IoT platformu koja omogućuje integraciju i upravljanje pametnim uređajima u
+            gradskom
+            okruženju, uključujući pametnu rasvjetu, upravljanje otpadom, prometne senzore i sustave za monitoring
+            okoliša.
+            Tehnologije: Node.js, Express.js, AWS IoT, Grafana, InfluxDB
+            Rezultati: Poboljšanje učinkovitosti gradskih usluga za 30%, smanjenje potrošnje energije za 25%, i
+            poboljšanje kvalitete života građana s visokom ocjenom zadovoljstva (4.6/5).</details><br>
+        </p>
 
     </article>
 

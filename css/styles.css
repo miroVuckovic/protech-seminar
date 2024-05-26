@@ -3,26 +3,64 @@
     color: white;
     border: 2px solid black;
     margin: 2px;
-    padding: 1vw;
-    font-family: sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-family: sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
-#main_nav { position:absolute; right:30px; top:40px;} 
-#main_nav li { float:left; margin-left:2px; } 
-#main_nav li a{ font-size:16px; color:#fff; text-decoration:none; padding:8px 15px; -moz-border-radius:7px; -webkit-border-radius:7px; border-radius:7px;} 
-#main_nav li a.active, #main_nav li a:hover{ background-color:#0b86cb; }
+#logo {
+    scale: 50%;
+    right: 40px;
+}
+
+#logo_image {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    padding: 0.5vw;
+}
+
+#main_nav {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    list-style-type: none;
+}
+
+#main_nav li {
+    float: left;
+    margin-left: 2px;
+}
+
+#main_nav li a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    background-color: grey;
+}
+
+#main_nav li a.active,
+#main_nav li a:hover {
+    background-color: #0b86cb;
+}
 
 .responsive {
     width: 100%;
     height: auto;
-  }
+}
 
 .header {
     background-color: white;
     color: black;
     border: 2px solid black;
     margin: 5px;
-    padding: 1vw;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
     text-align: center;
 }
 
@@ -38,14 +76,14 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);    
+    grid-template-columns: repeat(2, 1fr);
     padding: 1px;
     margin: 1px;
     font-size: 2vw;
-  }
+}
 
 .grid-item {
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 0px solid rgba(0, 0, 0, 0.8);
     padding: 1px;
     font-size: inherit;
     text-align: justify;
@@ -69,4 +107,8 @@
     font-family: inherit;
     font-size: 20px;
     text-align: center;
+}
+
+.summary {
+    font-weight: bolder;
 }
