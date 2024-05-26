@@ -79,13 +79,13 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 1px;
     margin: 1px;
-    font-size: 2vw;
+    font-size: 10px;
 }
 
 .grid-item {
-    border: 0px solid rgba(0, 0, 0, 0.8);
+    border: 1px solid white;
     padding: 1px;
-    font-size: inherit;
+    font-size: 10px;
     text-align: justify;
     margin: 1px;
 }
