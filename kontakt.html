@@ -22,65 +22,39 @@
                 <li><a href="index.html" >Home</a></li>
                 <li><a href="usluge.html">Usluge</a></li>
                 <li><a href="primjeri.html">Portfolio</a></li>
-                <li><a href="about.html" class="active">O nama</a></li>
+                <li><a href="about.html" >O nama</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <article class="grid-container">
-
-        <!-- 1. red grida -->
-        <figure class="grid-item">
-            <img src="slike/24_7-2048x2048.jpg" alt="Apstraktna slika raznoraznih informatičkih alata"
-                style="width:100%;">
-        </figure>
-
-        <p class="grid-item">Naš tim iskusnih tehničara dostupan je non-stop kako bi vam pomogao s bilo kakvim tehničkim problemima s
-            kojima se možete susresti.
-            Bilo da je riječ o rješavanju problema sa ​​softverom, popravku hardverskih problema ili postavljanju novih
-            uređaja, samo smo jedan telefonski poziv daleko.</p>
-
-        <!-- 2. red grida -->
-        <figure class="grid-item">
-            <img src="slike/software-update.png" alt="Apstraktna slika raznoraznih informatičkih alata"
-                style="width:100%;">
-        </figure>
-
-        <p class="grid-item">Ostanite ažurirani s najnovijim ažuriranjima i
-            instalacijama softvera.
-            Naši tehničari mogu vam pomoći instalirati, ažurirati i konfigurirati softverske
-            aplikacije kako biste osigurali optimalne performanse i sigurnost.</p>
-
-        <!-- 3. red grida -->
-        <figure class="grid-item">
-            <img src="slike/remote_support.jpg" alt="Apstraktna slika raznoraznih informatičkih alata za update"
-                style="width:100%;">
-        </figure>
-
-        <p class="grid-item">Ne dopustite da udaljenost bude prepreka u dobivanju potrebne pomoći.
-            Našom uslugom udaljene pomoći možemo sigurno povezati se s vašim računalom
-            ili uređajem i riješiti probleme u stvarnom vremenu, štedeći vam vrijeme i trud.</p>
-
-        <!-- 4. red grida -->
-        <figure class="grid-item">
-            <img src="slike/backup.png" alt="Apstraktna slika raznoraznih informatičkih alata za backup" style="width:100%;">
-        </figure>
-
-        <p class="grid-item">Gubitak važnih podataka može biti noćna mora.
-            S našim uslugama sigurnosnog kopiranja i obnove podataka,
-            možete mirno spavati znajući da su vaši datoteke sigurno kopirane i lako obnovljive u slučaju gubitka
-            podataka.</p>
-
-        <!-- 5. red grida -->
-        <figure class="grid-item">
-            <img src="slike/malware.jpg" alt="Apstraktna slika hakiranog računala" style="width:100%;">
-        </figure>
-
-        <p class="grid-item">Zaštita vaših digitalnih resursa ključna je u današnjem povezanom svijetu.
-            Naši stručnjaci mogu vam pomoći identificirati i ukloniti viruse, malware i druge sigurnosne prijetnje,
-            osiguravajući da vaši uređaji i podaci ostanu sigurni i zaštićeni.</p>
-
-    </article>
+    <main>
+        <section class="kontakt">
+            <h1>Kontaktirajte nas!</h1>
+            <p>Stupite u kontakt s nama kako biste saznali više o našim uslugama i proizvodima.</p>
+        
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Ime i prezime:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Poruka:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </form>
+    </section>
+    </main>
 
 
 
@@ -91,7 +65,39 @@
         <p>© 2024 ProTech d.o.o.</p>
     </footer>
 
-    <script src="" async defer></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (validateForm(name, email, subject, message)) {
+                console.log('Ime i prezime:', name);
+                console.log('Email:', email);
+                console.log('Subject:', subject);
+                console.log('Poruka:', message);
+                alert('Hvala što ste nas kontaktirali!');
+            }
+        });
+
+        function validateForm(name, email, subject, message) {
+            if (!name || !email || !subject || !message) {
+                alert('All fields are required.');
+                return false;
+            }
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 
 </html>
