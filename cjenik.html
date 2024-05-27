@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ProTech</title>
+    <link rel="icon" type="image/x-icon" href="slike/favicon.ico">
+    <meta name="description" content="Rješavanje softverskih i hardverskih problema extraordinare.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="logo_image">
+            <a href="index.html"><img src="slike/protech_transparent.png" alt="ProTech logo" ></a>
+        </div>
+        <h3>Rješavanje softverskih i hardverskih problema extraordinaire.</h3>
+        <nav>
+            <ul id="main_nav">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="primjeri.html">Portfolio</a></li>
+                <li><a href="cjenik.html" class="active">Cjenik</a></li>
+                <li><a href="about.html">O nama</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section class="content">
+            <h1>Our Services</h1>
+            <p>We offer a wide range of IT services tailored to meet the unique needs of our clients. Below are some of our exemplary services and their prices.</p>
+            <label for="currency">Choose a currency:</label>
+            <select id="currency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="HRK">HRK</option>
+                <option value="GBP">GBP</option>
+            </select>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price (<span id="currency-symbol">$</span>)</th>
+                    </tr>
+                </thead>
+                <tbody id="services-table">
+                    <tr>
+                        <td>Website Development</td>
+                        <td class="price" data-price="1500">1500</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile App Development</td>
+                        <td class="price" data-price="3000">3000</td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Solutions</td>
+                        <td class="price" data-price="2000">2000</td>
+                    </tr>
+                    <tr>
+                        <td>IT Consulting</td>
+                        <td class="price" data-price="100">100/h</td>
+                    </tr>
+                    <tr>
+                        <td>Cybersecurity Services</td>
+                        <td class="price" data-price="2500">2500</td>
+                    </tr>
+                    <tr>
+                        <td>Data Analysis</td>
+                        <td class="price" data-price="1800">1800</td>
+                    </tr>
+                    <tr>
+                        <td>Custom Software Development</td>
+                        <td class="price" data-price="4000">4000</td>
+                    </tr>
+                    <tr>
+                        <td>Network Setup</td>
+                        <td class="price" data-price="800">800</td>
+                    </tr>
+                    <tr>
+                        <td>Technical Support</td>
+                        <td class="price" data-price="50">50/h</td>
+                    </tr>
+                    <tr>
+                        <td>SEO Services</td>
+                        <td class="price" data-price="1200">1200</td>
+                    </tr>
+                    <tr>
+                        <td>Managed IT Services</td>
+                        <td class="price" data-price="2500">2500/m</td>
+                    </tr>
+                    <tr>
+                        <td>IT Training</td>
+                        <td class="price" data-price="500">500/d</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+
+
+    <footer class="footer">
+        <p>Autor: Miroslav Vučković</p>
+        <p><a href="mailto:mvuckovic@unisb.hr" target="_blank" rel="noreferrer">mvuckovic@unisb.hr</a></p>
+
+        <p>© 2024 ProTech d.o.o.</p>
+    </footer>
+
+    <script>
+        document.getElementById('currency').addEventListener('change', function() {
+            const currency = this.value;
+            const apiUrl = 'https://api.hnb.hr/tecajn/v1?format=json';
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const rates = parseRates(data);
+                    const conversionRate = rates[currency];
+                    updatePrices(conversionRate, currency);
+                })
+                .catch(error => console.error('Error fetching exchange rates:', error));
+        });
+
+        function parseRates(data) {
+            const rates = {};
+            data.forEach(rate => {
+                rates[rate.valuta] = parseFloat(rate.srednji_tecaj.replace(',', '.'));
+            });
+            return rates;
+        }
+
+        function updatePrices(rate, currency) {
+            const usdToHrkRate = 1 / rate; // USD to HRK
+            const prices = document.querySelectorAll('.price');
+            prices.forEach(priceElement => {
+                const basePrice = parseFloat(priceElement.getAttribute('data-price'));
+                const convertedPrice = (basePrice * usdToHrkRate).toFixed(2);
+                priceElement.textContent = `${convertedPrice} ${currency}`;
+            });
+
+            // Update currency symbol in the table header
+            const currencySymbols = {
+                'USD': '$',
+                'EUR': '€',
+                'GBP': '£',
+                'HRK': 'kn'
+                // Add more currency symbols as needed
+            };
+            document.getElementById('currency-symbol').textContent = currencySymbols[currency] || currency;
+        }
+    </script>
+</body>
+
+</html>

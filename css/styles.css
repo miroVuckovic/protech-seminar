@@ -6,18 +6,34 @@
     font-family: sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
-#logo {
-    scale: 50%;
-    right: 40px;
+.header {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    margin: 5px;
+    height: 200px;
+    width: auto;
+    /* text-align: center; */
 }
 
 #logo_image {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
-    padding: 0.5vw;
+    height: 200px;
+    width: auto;
+    position: fixed;
+    left: 0;
 }
+
+#logo {
+    width: 300;
+    height: 300;
+    position: fixed;
+}
+
+.img {
+    height: inherit;
+}
+
+
 
 #main_nav {
     position: absolute;
@@ -52,17 +68,7 @@
     height: auto;
 }
 
-.header {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    margin: 5px;
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;
-    text-align: center;
-}
+
 
 .article {
     color: white;
@@ -124,7 +130,7 @@ form {
     margin: 20px auto;
     background: #fff;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -143,7 +149,7 @@ form {
     padding: 10px;
     border: 1px solid #000000;
     border-radius: 4px;
-    
+
 }
 
 button[type="submit"] {
@@ -163,8 +169,74 @@ button[type="submit"]:hover {
 /* Responsive Styles */
 @media (max-width: 768px) {
     /* Existing responsive styles */
-    
+
     form {
         padding: 15px;
+    }
+}
+
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Existing responsive styles */
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
     }
 }
