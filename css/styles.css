@@ -1,5 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .body {
-    background-color: #072036;
+    background-color: #333;
     color: white;
     border: 2px solid black;
     margin: 2px;
@@ -7,33 +13,22 @@
 }
 
 .header {
-    background-color: white;
+    /* background-color: white;
     color: black;
     border: 2px solid black;
-    margin: 5px;
-    height: 200px;
+    margin: 5px; */
+    /* height: 200px; */
     width: auto;
-    /* text-align: center; */
+    text-align: left;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    font-size: small;
 }
 
-#logo_image {
-    height: 200px;
-    width: auto;
-    position: fixed;
-    left: 0;
+.h3 {
+    font-size: large;
 }
-
-#logo {
-    width: 300;
-    height: 300;
-    position: fixed;
-}
-
-.img {
-    height: inherit;
-}
-
-
 
 #main_nav {
     position: absolute;
@@ -60,7 +55,8 @@
 
 #main_nav li a.active,
 #main_nav li a:hover {
-    background-color: #0b86cb;
+    background-color: #d4d4d4;
+    color: black;
 }
 
 .responsive {
