@@ -7,16 +7,15 @@
 .body {
     background-color: #333;
     color: white;
-    border: 2px solid black;
+    border: 2px solid white;
     margin: 2px;
     font-family: sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .header {
-    /* background-color: white;
-    color: black;
-    border: 2px solid black;
-    margin: 5px; */
+
+    border: 1spx solid white;
+    margin: 5px;
     /* height: 200px; */
     width: auto;
     text-align: left;
@@ -28,6 +27,15 @@
 
 .h3 {
     font-size: large;
+    top: 500px;
+}
+
+#logo_image {
+    border: 2px solid white;
+}
+
+.main {
+    border: 1spx solid white;
 }
 
 #main_nav {
@@ -78,7 +86,7 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     padding: 1px;
     margin: 1px;
     font-size: 20px;
@@ -103,7 +111,7 @@
 
 .footer {
     color: white;
-    border: 2px solid black;
+    border: 2px solid white;
     margin: 5px;
     padding: 5px;
     font-family: inherit;
@@ -150,7 +158,7 @@ form {
 
 button[type="submit"] {
     display: inline-block;
-    background: #007bff;
+    background: grey;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -159,24 +167,15 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background: #0056b3;
+    background: green;
 }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    /* Existing responsive styles */
-
-    form {
-        padding: 15px;
-    }
-}
-
 
 /* Table Styles */
-table {
+table  {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+
 }
 
 table,
@@ -194,6 +193,16 @@ td {
 th {
     background-color: #f4f4f4;
     color: black;
+}
+
+
+
+.currencySelector {
+    text-align: center;
+}
+
+#caption {
+    top: 50%;
 }
 
 /* Responsive Styles */
@@ -234,5 +243,9 @@ th {
         width: 45%;
         padding-right: 10px;
         white-space: nowrap;
+    }
+
+    form {
+        padding: 15px;
     }
 }
