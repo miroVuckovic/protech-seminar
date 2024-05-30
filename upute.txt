@@ -4,23 +4,23 @@ Upute za izradu projektnog zadatka
 
 Obavezni elementi:
 
-Potrebno je napraviti minimalno 4 međusobno povezane stranice.
+Potrebno je napraviti minimalno 4 međusobno povezane stranice. +
 
-Stranice trebaju predstavljati neki OPG, frizerski, putničku agenciju, startup .... 
+Stranice trebaju predstavljati neki OPG, frizerski, putničku agenciju, startup ....  +
 
 (Može biti izmišljen, bolje nego stvarne informacije koristiti)
 
 Primjer: https://ladutti.com/
 
-Stranice moraju koristiti semantičke HTML5 elemente (https://www.w3schools.com/html/html5_semantic_elements.asp)
+Stranice moraju koristiti semantičke HTML5 elemente (https://www.w3schools.com/html/html5_semantic_elements.asp) +
 
-Potrebno je napraviti vlastiti CSS, ne koristiti gotove predloške, iako oni mogu biti inspiracija.
+Potrebno je napraviti vlastiti CSS, ne koristiti gotove predloške, iako oni mogu biti inspiracija. +
 
-Stranice trebaju dizajnerski biti povezane, ali sadržajno drugačije. Npr. naslovna stranica, stranica o proizvodu, o nama, kontakt,....
+Stranice trebaju dizajnerski biti povezane, ali sadržajno drugačije. Npr. naslovna stranica, stranica o proizvodu, o nama, kontakt,.... +
 
-Stranica mora imate izbornik preko kojega se može navigirati između stranica.
+Stranica mora imate izbornik preko kojega se može navigirati između stranica. +
 
-Minimalno jedna stranica mora imati sliku.
+Minimalno jedna stranica mora imati sliku. +
 
 U cijelom projektu mora biti minimalno jedan element sidra (hiperveza na dio stranice), element liste, element tablice.
 

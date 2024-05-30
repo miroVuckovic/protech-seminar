@@ -14,7 +14,8 @@
 <body class="body">
     <header class="header">
         <div class="logo_image">
-            <a  href="index.html"><img src="slike/logo_transparent_white.png" class="logo" alt="ProTech logo" height="200" width="200" ></a>
+            <a href="index.html"><img src="slike/protech.svg" class="logo" alt="ProTech logo"
+                height="300" width="300"></a>
         </div>
         <h3 id="moto">Rješavanje softverskih i hardverskih problema extraordinaire.</h3>
         <nav>
@@ -34,93 +35,88 @@
 
     <main>
         <section class="content">
-            <h1>Our Services</h1>
-            <br>
-            <p>We offer a wide range of IT services tailored to meet the unique needs of our clients. Below are some of our exemplary services and their prices.</p>
-            <br>
-            <label id="currencySelector" for="currency">Choose a currency:</label>
+            <h1>Naše Usluge</h1><br>
+            <p>Nudimo širok spektar IT usluga prilagođenih jedinstvenim potrebama naših klijenata. Ispod su neke od naših primjernih usluga i njihove cijene.</p><br>
+            <label for="currency">Odaberite valutu:</label>
             <select id="currency">
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
-                <option value="HRK">HRK</option>
                 <option value="GBP">GBP</option>
+                <!-- <option value="HRK">HRK</option> -->
+                <!-- Dodajte još valuta po potrebi -->
             </select>
-            <table class="table table-hover">
+            <table>
                 <thead>
                     <tr>
-                        <th>Service</th>
-                        <th>Price (<span id="currency-symbol">$</span>)</th>
+                        <th>Usluga</th>
+                        <th>Cijena (<span id="currency-symbol">$</span>)</th>
                     </tr>
                 </thead>
                 <tbody id="services-table">
                     <tr>
-                        <td>Website Development</td>
+                        <td>Razvoj Web Stranica</td>
                         <td class="price" data-price="1500">1500</td>
                     </tr>
                     <tr>
-                        <td>Mobile App Development</td>
+                        <td>Razvoj Mobilnih Aplikacija</td>
                         <td class="price" data-price="3000">3000</td>
                     </tr>
                     <tr>
-                        <td>Cloud Solutions</td>
+                        <td>Cloud Rješenja</td>
                         <td class="price" data-price="2000">2000</td>
                     </tr>
                     <tr>
-                        <td>IT Consulting</td>
-                        <td class="price" data-price="100">100/h</td>
+                        <td>IT Savjetovanje</td>
+                        <td class="price" data-price="100">100/sat</td>
                     </tr>
                     <tr>
-                        <td>Cybersecurity Services</td>
+                        <td>Cybersecurity Usluge</td>
                         <td class="price" data-price="2500">2500</td>
                     </tr>
                     <tr>
-                        <td>Data Analysis</td>
+                        <td>Analiza Podataka</td>
                         <td class="price" data-price="1800">1800</td>
                     </tr>
                     <tr>
-                        <td>Custom Software Development</td>
+                        <td>Razvoj Prilagođenog Softvera</td>
                         <td class="price" data-price="4000">4000</td>
                     </tr>
                     <tr>
-                        <td>Network Setup</td>
+                        <td>Postavljanje Mreže</td>
                         <td class="price" data-price="800">800</td>
                     </tr>
                     <tr>
-                        <td>Technical Support</td>
-                        <td class="price" data-price="50">50/h</td>
+                        <td>Tehnička Podrška</td>
+                        <td class="price" data-price="50">50/sat</td>
                     </tr>
                     <tr>
-                        <td>SEO Services</td>
+                        <td>SEO Usluge</td>
                         <td class="price" data-price="1200">1200</td>
                     </tr>
                     <tr>
-                        <td>Managed IT Services</td>
-                        <td class="price" data-price="2500">2500/m</td>
+                        <td>Managed IT Usluge</td>
+                        <td class="price" data-price="2500">2500/mjesečno</td>
                     </tr>
                     <tr>
-                        <td>IT Training</td>
-                        <td class="price" data-price="500">500/d</td>
+                        <td>IT Obuka</td>
+                        <td class="price" data-price="500">500/dan</td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
 
-
-
-    <footer class="footer">
-        <p>Autor: Miroslav Vučković</p>
-        <p><a href="mailto:mvuckovic@unisb.hr" target="_blank" rel="noreferrer">mvuckovic@unisb.hr</a></p>
-
-        <p>© 2024 protech d.o.o.</p>
-    </footer>
+    <script src="js/footer.js"></script>
 
     <script>
         document.getElementById('currency').addEventListener('change', function() {
             const currency = this.value;
             const apiUrl = 'https://api.hnb.hr/tecajn/v1?format=json';
+            // Proxy server korišten zbog CORS-a.
+            // Prije testiranja potrebno ručno otvoriti URL u browseru i kliknuti na button "Request temporary access to the demo server."
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
-            fetch(apiUrl)
+            fetch(proxyUrl + apiUrl)
                 .then(response => response.json())
                 .then(data => {
                     const rates = parseRates(data);
@@ -152,7 +148,7 @@
                 'USD': '$',
                 'EUR': '€',
                 'GBP': '£',
-                'HRK': 'kn'
+                // 'HRK': 'kn'
                 // Add more currency symbols as needed
             };
             document.getElementById('currency-symbol').textContent = currencySymbols[currency] || currency;
