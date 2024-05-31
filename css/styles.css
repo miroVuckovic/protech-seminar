@@ -25,28 +25,28 @@
     font-size: small;
 }
 
+.logo {
+    /* border: 2px solid white; */
+    position: relative;
+    bottom: 20px;
+
+}
+
 #moto {
     /* border: 1px solid white; */
     font-size: medium;
     font-weight: lighter;
     position: relative;
     bottom: 50px;
-    margin-left: 10px;
-    margin-bottom: 100px;
-    margin-top: 100px;
 }
 
-.logo {
-    /* border: 2px solid white; */
-    margin-left: 10px;
-    margin-bottom: 100px;
-    margin-top: 100px;
-}
+
 
 #logo_image {
     border: 2px solid white;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     /* margin-bottom: 100px; */
+
 }
 
 .main {
@@ -103,7 +103,8 @@
     /* margin: 10px; */
     padding: 10px;
     position: relative;
-    left: 20px;;
+    left: 20px;
+    ;
 }
 
 .article {
@@ -204,7 +205,7 @@ button[type="submit"]:hover {
 }
 
 /* Table Styles */
-table  {
+table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;

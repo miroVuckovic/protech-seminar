@@ -14,13 +14,13 @@
 <body class="body">
     <header class="header">
         <div class="logo_image">
-            <a href="index.html"><img src="slike/protech.svg" class="logo" alt="ProTech logo"
-                height="300" width="300"></a>
+            <a href="index.html"><img src="slike/protech.svg" class="logo" alt="ProTech logo" height="120"
+                    width="200"></a>
         </div>
         <h3 id="moto">Rješavanje softverskih i hardverskih problema extraordinaire.</h3>
         <nav>
             <ul id="main_nav">
-                <li><a href="index.html" >Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="primjeri.html">Portfolio</a></li>
                 <li><a href="cjenik.html" class="active">Cjenik</a></li>
                 <li><a href="about.html">O nama</a></li>
@@ -28,7 +28,7 @@
 
             </ul>
         </nav>
-        
+
     </header>
 
     <br>
@@ -36,11 +36,12 @@
     <main>
         <section class="content">
             <h1>Naše Usluge</h1><br>
-            <p>Nudimo širok spektar IT usluga prilagođenih jedinstvenim potrebama naših klijenata. Ispod su neke od naših primjernih usluga i njihove cijene.</p><br>
+            <p>Nudimo širok spektar IT usluga prilagođenih jedinstvenim potrebama naših klijenata. Ispod su neke od
+                naših primjernih usluga i njihove cijene.</p><br>
             <label for="currency">Odaberite valutu:</label>
             <select id="currency">
-                <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
                 <option value="GBP">GBP</option>
                 <!-- <option value="HRK">HRK</option> -->
                 <!-- Dodajte još valuta po potrebi -->
@@ -49,7 +50,7 @@
                 <thead>
                     <tr>
                         <th>Usluga</th>
-                        <th>Cijena (<span id="currency-symbol">$</span>)</th>
+                        <th>Cijena (<span id="currency-symbol">€</span>)</th>
                     </tr>
                 </thead>
                 <tbody id="services-table">
@@ -109,9 +110,9 @@
     <script src="js/footer.js"></script>
 
     <script>
-        document.getElementById('currency').addEventListener('change', function() {
+        document.getElementById('currency').addEventListener('change', function () {
             const currency = this.value;
-            const apiUrl = 'https://api.hnb.hr/tecajn/v1?format=json';
+            const apiUrl = 'https://api.hnb.hr/tecajn-eur/v3';
             // Proxy server korišten zbog CORS-a.
             // Prije testiranja potrebno ručno otvoriti URL u browseru i kliknuti na button "Request temporary access to the demo server."
             const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
@@ -135,21 +136,24 @@
         }
 
         function updatePrices(rate, currency) {
-            const usdToHrkRate = 1 / rate; // USD to HRK
+
+            console.log("rate: " + rate);
+            
+            if (rate == undefined) {
+                rate = 1.0;
+            }
+
             const prices = document.querySelectorAll('.price');
             prices.forEach(priceElement => {
                 const basePrice = parseFloat(priceElement.getAttribute('data-price'));
-                const convertedPrice = (basePrice * usdToHrkRate).toFixed(2);
+                const convertedPrice = (basePrice * rate).toFixed(2);
                 priceElement.textContent = `${convertedPrice} ${currency}`;
             });
 
-            // Update currency symbol in the table header
             const currencySymbols = {
                 'USD': '$',
                 'EUR': '€',
                 'GBP': '£',
-                // 'HRK': 'kn'
-                // Add more currency symbols as needed
             };
             document.getElementById('currency-symbol').textContent = currencySymbols[currency] || currency;
         }
