@@ -132,6 +132,11 @@
     font-size: 20px;
     text-align: justify;
     margin: 1px;
+    width: 50%;
+}
+
+.details {
+    
 }
 
 .aside {
