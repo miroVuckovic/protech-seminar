@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>protech</title>
     <link rel="icon" type="image/x-icon" href="slike/favicon.ico">
-    <meta name="description" content="Rješavanje softverskih i hardverskih problema extraordinare.">
+    <meta name="description" content="Rješavanje softverskih i hardverskih problema extraordinaire.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -14,16 +14,16 @@
 <body class="body">
     <header class="header">
         <div class="logo_image">
-            <a href="index.html"><img src="slike/protech.svg" class="logo" alt="ProTech logo"
-                height="120" width="200"></a>
+            <a href="index.html"><img src="slike/protech.svg" class="logo" alt="ProTech logo" height="120"
+                    width="200"></a>
         </div>
         <h3 id="moto">Rješavanje softverskih i hardverskih problema extraordinaire.</h3>
         <nav>
             <ul id="main_nav">
-                <li><a href="index.html" >Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="primjeri.html">Portfolio</a></li>
                 <li><a href="cjenik.html">Cjenik</a></li>
-                <li><a href="about.html" >O nama</a></li>
+                <li><a href="about.html">O nama</a></li>
                 <li><a href="kontakt.html" class="active">Kontakt</a></li>
 
             </ul>
@@ -32,9 +32,9 @@
 
     <main>
         <section class="kontakt">
-            <h1>Kontaktirajte nas!</h1>
+            <h1>Kontaktirajte nas!</h1><br>
             <p>Stupite u kontakt s nama kako biste saznali više o našim uslugama i proizvodima.</p>
-        
+
             <form id="contactForm">
                 <div class="form-group">
                     <label for="name">Ime i prezime:</label>
@@ -54,47 +54,13 @@
                 </div>
                 <button type="submit">Submit</button>
             </form>
-        </form>
-    </section>
+            </form>
+        </section>
     </main>
 
-
-
     <script src="js/footer.js"></script>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            if (validateForm(name, email, subject, message)) {
-                console.log('Ime i prezime:', name);
-                console.log('Email:', email);
-                console.log('Subject:', subject);
-                console.log('Poruka:', message);
-                alert('Hvala što ste nas kontaktirali!');
-            }
-        });
-
-        function validateForm(name, email, subject, message) {
-            if (!name || !email || !subject || !message) {
-                alert('All fields are required.');
-                return false;
-            }
-
-            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-            if (!email.match(emailPattern)) {
-                alert('Please enter a valid email address.');
-                return false;
-            }
-
-            return true;
-        }
-    </script>
+    <script src="js/contact_validator.js"></script>
+    <script src="js/cookie_saver.js"></script>
 </body>
 
 </html>

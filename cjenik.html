@@ -6,18 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>protech</title>
     <link rel="icon" type="image/x-icon" href="slike/favicon.ico">
-    <meta name="description" content="Rješavanje softverskih i hardverskih problema extraordinare.">
+    <meta name="description" content="Rješavanje softverskih i hardverskih problema extraordinaire.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="body">
     <header class="header">
+
         <div class="logo_image">
             <a href="index.html"><img src="slike/protech.svg" class="logo" alt="ProTech logo" height="120"
                     width="200"></a>
         </div>
+
         <h3 id="moto">Rješavanje softverskih i hardverskih problema extraordinaire.</h3>
+
         <nav>
             <ul id="main_nav">
                 <li><a href="index.html">Home</a></li>
@@ -25,13 +28,10 @@
                 <li><a href="cjenik.html" class="active">Cjenik</a></li>
                 <li><a href="about.html">O nama</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
-
             </ul>
         </nav>
 
     </header>
-
-    <br>
 
     <main>
         <section class="content">
@@ -67,8 +67,8 @@
                         <td class="price" data-price="2000">2000</td>
                     </tr>
                     <tr>
-                        <td>IT Savjetovanje</td>
-                        <td class="price" data-price="100">100/sat</td>
+                        <td>IT Savjetovanje (po satu)</td>
+                        <td class="price" data-price="100">100</td>
                     </tr>
                     <tr>
                         <td>Cybersecurity Usluge</td>
@@ -87,20 +87,20 @@
                         <td class="price" data-price="800">800</td>
                     </tr>
                     <tr>
-                        <td>Tehnička Podrška</td>
-                        <td class="price" data-price="50">50/sat</td>
+                        <td>Tehnička Podrška (po satu)</td>
+                        <td class="price" data-price="50">50</td>
                     </tr>
                     <tr>
                         <td>SEO Usluge</td>
                         <td class="price" data-price="1200">1200</td>
                     </tr>
                     <tr>
-                        <td>Managed IT Usluge</td>
-                        <td class="price" data-price="2500">2500/mjesečno</td>
+                        <td>Managed IT Usluge (mjesečno)</td>
+                        <td class="price" data-price="2500">2500</td>
                     </tr>
                     <tr>
-                        <td>IT Obuka</td>
-                        <td class="price" data-price="500">500/dan</td>
+                        <td>IT Obuka (po danu)</td>
+                        <td class="price" data-price="500">500</td>
                     </tr>
                 </tbody>
             </table>
@@ -108,56 +108,9 @@
     </main>
 
     <script src="js/footer.js"></script>
+    <script src="js/conversion.js"></script>
 
-    <script>
-        document.getElementById('currency').addEventListener('change', function () {
-            const currency = this.value;
-            const apiUrl = 'https://api.hnb.hr/tecajn-eur/v3';
-            // Proxy server korišten zbog CORS-a.
-            // Prije testiranja potrebno ručno otvoriti URL u browseru i kliknuti na button "Request temporary access to the demo server."
-            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
-            fetch(proxyUrl + apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    const rates = parseRates(data);
-                    const conversionRate = rates[currency];
-                    updatePrices(conversionRate, currency);
-                })
-                .catch(error => console.error('Error fetching exchange rates:', error));
-        });
-
-        function parseRates(data) {
-            const rates = {};
-            data.forEach(rate => {
-                rates[rate.valuta] = parseFloat(rate.srednji_tecaj.replace(',', '.'));
-            });
-            return rates;
-        }
-
-        function updatePrices(rate, currency) {
-
-            console.log("rate: " + rate);
-            
-            if (rate == undefined) {
-                rate = 1.0;
-            }
-
-            const prices = document.querySelectorAll('.price');
-            prices.forEach(priceElement => {
-                const basePrice = parseFloat(priceElement.getAttribute('data-price'));
-                const convertedPrice = (basePrice * rate).toFixed(2);
-                priceElement.textContent = `${convertedPrice} ${currency}`;
-            });
-
-            const currencySymbols = {
-                'USD': '$',
-                'EUR': '€',
-                'GBP': '£',
-            };
-            document.getElementById('currency-symbol').textContent = currencySymbols[currency] || currency;
-        }
-    </script>
 </body>
 
 </html>
