@@ -38,11 +38,11 @@ Povezivanje sa društvenim mrežama.
 
 Umetanje interaktivnih sadržaja.
 
-Responzivnost (https://www.w3schools.com/css/css_rwd_grid.asp, w3.css, bootstrap ili slično)
+Responzivnost (https://www.w3schools.com/css/css_rwd_grid.asp, w3.css, bootstrap ili slično) +
 
 Dodatni sadržaji
 
-Napredni dizajn (float, position, animation, svg,...)
+Napredni dizajn (float, position, animation, svg,...) +
 
 Korištenje gotovih biblioteka za neki element na stranici. Uz poznavanje biblioteke i način kako izmijeniti određene stavke.
 
