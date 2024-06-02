@@ -1,10 +1,10 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Spriječiti standardno slanje obrasca
 
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value;
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let subject = document.getElementById('subject').value;
+    let message = document.getElementById('message').value;
 
     // Spremi podatke u kolačiće
     document.cookie = "name=" + encodeURIComponent(name) + "; path=/";
@@ -18,7 +18,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // Na primjer, korištenjem fetch() ili XMLHttpRequest
 });
 
-// Funkcija za čitanje vrijednosti kolačića
+// Funkcija za čitanje vrijednosti cookieja.
 function getCookie(name) {
     let cookieArr = document.cookie.split(";");
     for (let i = 0; i < cookieArr.length; i++) {
@@ -30,12 +30,12 @@ function getCookie(name) {
     return null;
 }
 
-// Učitaj spremljene podatke iz kolačića u polja obrasca (ako postoje)
+// Učitaj spremljene podatke iz cookieja u polja obrasca (ako postoje)
 window.onload = function() {
-    var name = getCookie("name");
-    var email = getCookie("email");
-    var subject = getCookie("subject");
-    var message = getCookie("message");
+    let name = getCookie("name");
+    let email = getCookie("email");
+    let subject = getCookie("subject");
+    let message = getCookie("message");
 
     if (name) {
         document.getElementById('name').value = name;

@@ -21,6 +21,7 @@ function validateForm(name, email, subject, message) {
         return false;
     }
 
+    // Regex za detektiranje valjanih znakova u email adresi.
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     if (!email.match(emailPattern)) {
         alert('Molimo, unesite valjanu email adresu.');

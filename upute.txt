@@ -22,7 +22,7 @@ Stranica mora imate izbornik preko kojega se može navigirati između stranica. 
 
 Minimalno jedna stranica mora imati sliku. +
 
-U cijelom projektu mora biti minimalno jedan element sidra (hiperveza na dio stranice), element liste, element tablice.
+U cijelom projektu mora biti minimalno jedan element sidra (hiperveza na dio stranice), element liste, element tablice. +
 
 Dodati formu na stranicu i uz pomoć JS je validirati i recimo spremiti u lokalnu memoriju. +
 

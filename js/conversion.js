@@ -6,6 +6,7 @@ document.getElementById('currency').addEventListener('change', function () {
     // Prije testiranja potrebno ručno otvoriti URL u browseru i kliknuti na button "Request temporary access to the demo server."
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
+    // Dohvaćanje API-ja preko CORS proxya.
     fetch(proxyUrl + apiUrl)
         .then(response => response.json())
         .then(data => {
@@ -13,7 +14,7 @@ document.getElementById('currency').addEventListener('change', function () {
             const conversionRate = rates[currency];
             updatePrices(conversionRate, currency);
         })
-        .catch(error => console.error('Error fetching exchange rates:', error));
+        .catch(error => console.error('Pogreška pri dohvaćanju tečaja:', error));
 });
 
 function parseRates(data) {

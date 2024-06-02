@@ -15,7 +15,7 @@
 .header {
 
     border: 1px solid white;
-    margin: 5px;
+    margin: 1px;
     height: 100px;
     width: auto;
     text-align: left;
@@ -38,6 +38,7 @@
     font-weight: lighter;
     position: relative;
     bottom: 50px;
+    left: 20px;
 }
 
 
@@ -70,14 +71,14 @@
 }
 
 #main_nav li a {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     font-size: 16px;
     color: white;
-    text-decoration: none;
+    text-decoration:none;
     padding: 8px 15px;
-    -moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
-    border-radius: 7px;
+    /* -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px; */
     background-color: grey;
 }
 
@@ -111,7 +112,7 @@
 .article {
 
     color: white;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     margin: 5px;
     padding: 5px;
     font-family: verdana;
@@ -121,25 +122,26 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 1px;
     margin: 1px;
     /* font-size: 20px; */
+    /* border: 1px red; */
 }
 
 .grid-item {
     /* border: 1px solid white; */
-    padding: 1px;
+    padding: 50px;
     font-size: 15px;
     text-align: justify;
     margin: 1px;
-    width: 75%;
+    width: 100%;
     position: relative;
     /* bottom: 75px; */
 }
 
 .grid-container-primjeri {
-    border: 1px solid cyan;
+    /* border: 1px solid cyan; */
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     padding: 1px;
@@ -148,12 +150,12 @@
 }
 
 .grid-item-primjer {
-    border: 1px solid white;
-    padding: 1px;
+    /* border: 1px solid white; */
     font-size: 15px;
     text-align: justify;
     margin: 1px;
     width: 100%;
+    padding: 50px;
     /* position: relative; */
     /* bottom: 75px; */
 }
@@ -175,8 +177,20 @@
     text-align: justify;
 }
 
+#anchor {
+    /* border: 2px solid red; */
+    position:relative;
+    /* left:46%; */
+    /* width: 100vw; */
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: large;
+}
+
 
 .footer {
+    border: 2px solid red;
     color: white;
     border: 2px solid white;
     margin: 5px;
@@ -186,11 +200,14 @@
     text-align: center;
 }
 
+
+
 .summary {
     font-weight: bolder;
 }
 
 .kontakt {
+    padding:10px;
     font-family: inherit;
     font-size: 20px;
     text-align: center;
@@ -262,9 +279,31 @@ th {
     color: black;
 }
 
+.content {
+    padding: 5px;
+    overflow:auto;
+}
 
+.usluge {
+    /* overflow:auto; */
+    display: block;
+    /* width: 100%; */
+    /* border: 1px solid red; */
+    text-align: center;
+    padding: 5px;
+}
 
-.currencySelector {
+#currencySelectorLabel {
+    float:left;
+    text-align: center;
+}
+
+#currency {
+    /* border: 1px solid cyan; */
+    /* position: relative; */
+    left: 0;
+    right: 0;
+    float:right;
     text-align: center;
 }
 
@@ -341,6 +380,15 @@ th {
         /* bottom: 75px; */
     }
 
+    .grid-container-primjeri {
+        border: 1px solid cyan;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1px;
+        margin: 1px;
+        /* font-size: 20px; */
+    }
+
     table,
     thead,
     tbody,
@@ -365,7 +413,7 @@ th {
         border: none;
         border-bottom: 1px solid #eee;
         position: relative;
-        padding-left: 50%;
+        padding-left: 30%;
     }
 
     td:before {
@@ -383,6 +431,14 @@ th {
         padding: 5px;
         /* padding: 50px;
         padding-top: 100px; */
+    }
+
+    #currency {
+        /* border: 1px solid cyan; */
+        /* position: relative; */
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
     }
 
 

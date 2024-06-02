@@ -12,7 +12,7 @@
 </head>
 
 <body class="body">
-    <header class="header">
+    <header id="header" class="header">
 
         <div class="logo_image">
             <a href="index.html"><img src="slike/protech.svg" class="logo" alt="ProTech logo" height="120"
@@ -35,10 +35,10 @@
 
     <main>
         <section class="content">
-            <h1>Naše Usluge</h1><br>
-            <p>Nudimo širok spektar IT usluga prilagođenih jedinstvenim potrebama naših klijenata. Ispod su neke od
+            <h1 class="usluge">Naše Usluge</h1><br>
+            <p class="usluge">Nudimo širok spektar IT usluga prilagođenih jedinstvenim potrebama naših klijenata. Ispod su neke od
                 naših primjernih usluga i njihove cijene.</p><br>
-            <label for="currency">Odaberite valutu:</label>
+            
             <select id="currency">
                 <option value="EUR">EUR</option>
                 <option value="USD">USD</option>
@@ -106,6 +106,8 @@
             </table>
         </section>
     </main>
+
+    <a id="anchor" href="#header">Natrag na vrh</a> 
 
     <script src="js/footer.js"></script>
     <script src="js/conversion.js"></script>
