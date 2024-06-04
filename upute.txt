@@ -48,6 +48,8 @@ Korištenje gotovih biblioteka za neki element na stranici. Uz poznavanje biblio
 
 Može se dodati još jedan dokument s nepovezanim sadržajem, ali s nekim vlastitim kodom ili rješenjem (kalkulator, gumb koji pokreće neke funkcije, obavijest pri zatvaranju dokumenta,...).
 
+https://www.geeksforgeeks.org/how-to-make-dark-mode-for-websites-using-html-css-javascript/
+
 Prebaciti stranicu na https://www.000webhost.com/ ili neki drugi (besplatni) hosting.
 
 Povezati se s nekim API-jem (HNB ili slično) i napraviti nešto osim pokazati podateke (recimo cjenik usluga u dvije valute )
