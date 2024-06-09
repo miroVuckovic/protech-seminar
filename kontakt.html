@@ -14,12 +14,14 @@
 <body class="body">
     <header id="header" class="header">
         <div class="logo_image">
-            <a href="index.html"><img src="slike/protech.svg" class="logo" alt="ProTech logo" height="120"
+            <a href="index.html"><img src="slike/protech.svg" id="logo_pic" class="logo" alt="ProTech logo" height="120"
                     width="200"></a>
         </div>
         <h3 id="moto">Rješavanje softverskih i hardverskih problema extraordinaire.</h3>
         <nav>
             <ul id="main_nav">
+                <li><img src="slike/light_mode.png" id="night-mode-button"
+                    height="32" width="32" onclick="switchMode()"></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="primjeri.html">Portfolio</a></li>
                 <li><a href="cjenik.html">Cjenik</a></li>
@@ -63,6 +65,7 @@
     <script src="js/footer.js"></script>
     <script src="js/contact_validator.js"></script>
     <script src="js/cookie_saver.js"></script>
+    <script src="js/dark_mode.js"></script>
 </body>
 
 </html>

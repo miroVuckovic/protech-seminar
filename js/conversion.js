@@ -2,7 +2,8 @@ document.getElementById('currency').addEventListener('change', function () {
     const currency = this.value;
     const apiUrl = 'https://api.hnb.hr/tecajn-eur/v3';
     
-    // Proxy server korišten zbog CORS-a.
+    // Proxy server korišten zbog CORS-a. infinityfree.com ne podržava CORS.
+    // https://forum.infinityfree.com/t/ensuring-only-web-browsers-can-access-your-website/49353
     // Prije testiranja potrebno ručno otvoriti URL u browseru i kliknuti na button "Request temporary access to the demo server."
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
