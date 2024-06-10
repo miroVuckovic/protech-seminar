@@ -8,7 +8,7 @@ document.getElementById('currency').addEventListener('change', function () {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
     // Dohvaćanje API-ja preko CORS proxya.
-    fetch(proxyUrl + apiUrl)
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             const rates = parseRates(data);
