@@ -46,6 +46,7 @@ function updatePrices(rate, currency) {
         'USD': '$',
         'EUR': '€',
         'GBP': '£',
+        'CHF': 'CHF',
     };
     document.getElementById('currency-symbol').textContent = currencySymbols[currency] || currency;
 }
